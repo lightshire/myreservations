@@ -65,7 +65,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => 'e9pnRxv4gN059ukWHq6WOkEigQmtVbby',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -114,7 +114,8 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Basset\BassetServiceProvider',
-		'Bootstrapper\BootstrapperServiceProvider'
+		'Bootstrapper\BootstrapperServiceProvider',
+		'Profiler\ProfilerServiceProvider'
 
 	),
 
@@ -204,6 +205,7 @@ return array(
 		'Thumbnail'      => 'Bootstrapper\\Thumbnail',
 		'Typeahead'      => 'Bootstrapper\\Typeahead',
 		'Typography'     => 'Bootstrapper\\Typography',
+		'Profiler' => 'Profiler\Facades\Profiler'
 
 	),
 

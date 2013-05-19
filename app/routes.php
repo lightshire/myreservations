@@ -11,7 +11,22 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+
+/*
+	Route Controllers (S)
+*/
+Route::resource('/', 'IndexController');
+Route::controller('admin', 'AdminController');
+Route::resource('login', 'LoginController');
+
+/*
+	Route Controllers (E)
+*/
+
+/*
+	Route Patterns (S)
+*/
+	Route::when('admin/*', 'guest');
+/*
+	Route Patterns (E)
+*/

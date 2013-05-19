@@ -1,7 +1,8 @@
 {
 	"require": {
 		"laravel/framework": "4.0.*",
-		"patricktalmadge/bootstrapper": "dev-develop"
+		"patricktalmadge/bootstrapper": "dev-develop",
+		"loic-sharma/profiler": "1.0.*"
 	},
 	"autoload": {
 		"classmap": [
