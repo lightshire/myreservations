@@ -1,7 +1,7 @@
 <div class="row-fluid">
   <div class="span12">
     <div class="footer">
-      <div>2013 &copy; </div>
+      <div>2013 &copy; My Reservations | Room Angel</div>
     
     </div>
   </div>
