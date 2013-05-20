@@ -22,7 +22,9 @@
     <div style="text-align: center">
       <i class="icon-magic logo-icon"></i>
     </div>
-
+    @if(Session::get('error'))
+      {{Alert::error('Login Error has accoured. Please try again')->open()}}
+    @endif
     <div id="login-manager">
       <div id="login" class="login-wrapper animated">
         <form action="{{URL::to('login')}}" method="POST">

@@ -1,22 +1,15 @@
 <?php
 
-class AdminController extends \BaseController {
+class ReservationsController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function getIndex()
+	public function index()
 	{
 		//
-		return View::make('admin.index');
-	}
-
-	
-	public function getLogout(){
-		Auth::logout();
-		return Redirect::to('login');
 	}
 
 	/**

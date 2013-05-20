@@ -13,22 +13,6 @@
 </head>
 <body>
 
-<div id="modal" class="black-box modal hide fade">
-  <div class="modal-header tab-header">
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
-    <span>Some modal title</span>
-  </div>
-  <div class="modal-body separator">
-    <h4>Text in a modal</h4>
-    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
-  </div>
-  <div class="modal-footer">
-    <div class="inner-well">
-      <a class="button mini rounded light-gray" data-dismiss="modal">Close</a>
-      <a class="button mini rounded blue">Save changes</a>
-    </div>
-  </div>
-</div>
 
 <div id="modal-gallery" class="black-box modal modal-gallery hide fade">
   <div class="modal-header tab-header">

@@ -38,7 +38,7 @@ class LoginController extends \BaseController {
 		
 			return Redirect::to('admin');
 		}else{
-			return Redirect::to('login');
+			return Redirect::to('login')->with('error',1);
 		}
 	}
 

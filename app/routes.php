@@ -26,7 +26,7 @@ Route::resource('login', 'LoginController');
 /*
 	Route Patterns (S)
 */
-	Route::when('admin/*', 'guest');
+Route::when('admin/*', 'auth');
 /*
 	Route Patterns (E)
 */
