@@ -18,6 +18,7 @@
 Route::resource('/', 'IndexController');
 Route::controller('admin', 'AdminController');
 Route::resource('login', 'LoginController');
+Route::resource('reservations', 'ReservationsController');
 
 /*
 	Route Controllers (E)

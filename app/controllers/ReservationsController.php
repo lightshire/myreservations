@@ -1,6 +1,6 @@
 <?php
 
-class ReservationsController extends \BaseController {
+class ReservationsController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -30,6 +30,12 @@ class ReservationsController extends \BaseController {
 	public function store()
 	{
 		//
+		$redirect_to = e(Input::get('redirect-to')) ? e(Input::get('redirect-to')) : 'json';
+		$reservation = ReservationApi::save(Input::get('api-type'), Input::all());
+		if(Request::ajax() || $redirect_to == 'json')
+			return Response::json($reservation);
+		else
+			return Redirect::to($redirect_to)->with('success','1');
 	}
 
 	/**

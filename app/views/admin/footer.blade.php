@@ -34,7 +34,8 @@
   </div>
 </script>
 <script src="{{URL::asset('javascripts')}}/application.js" type="text/javascript"></script>
-<script src="{{URL::asset('javascripts')}}/docs.js" type="text/javascript"></script><script src="../../javascripts/docs_charts.js" type="text/javascript"></script>
+<script src="{{URL::asset('javascripts')}}/docs.js" type="text/javascript"></script>
+<script src="{{URL::asset('javascripts')}}/docs_charts.js" type="text/javascript"></script>
 <script src="{{URL::asset('javascripts')}}/documentation.js" type="text/javascript"></script>
 <script src="{{URL::asset('javascripts')}}/prettify.js" type="text/javascript"></script>
 <link hred="{{URL::asset('stylesheets')}}/prettify.css" media="screen" rel="stylesheet" type="text/css" />
@@ -43,18 +44,19 @@
 </script>
 
 <script type="text/javascript">
+  $(document).ready(function(){
+    $("[reservation-id=from-picker]").datepicker();
+    $("[reservation-id=to-picker]").datepicker();
+  });
     $(function(){
         Notifications.push({
             imagePath: "{{URL::asset('images')}}/cloud.png",
-            text: "<p><b>Welcome to the Plastique theme!</b></p><div>Be sure to check out all the features!</div>",
+            text: "",
             autoDismiss: 10
         });
     });
 </script>
 
-<script type="text/javascript">
-
-</script>
 
 </body>
 </html>
