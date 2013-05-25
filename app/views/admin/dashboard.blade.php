@@ -62,6 +62,7 @@
             @if(Session::get('success'))
               {{Alert::info('Successfully saved a new Reservation!')->open()}}
             @endif
+            <?php $reservations = ReservationApi::pullSimple(0, 0, 10)?>
             <table class='table table-condensed'>
               <thead>
                 <tr>
@@ -72,12 +73,14 @@
                 </tr>
               </thead>
               <tbody>
+              @foreach($reservations as $r)
                 <tr class="">
-                  <td>1</td>
-                  <td>10:00</td>
-                  <td>20.00</td>
+                  <td>{{ $r->id }}</td>
+                  <td>{{ $r->booked_from }}</td>
+                  <td>{{ $r->booked_to }}</td>
                   <td>30.00</td>
                 </tr>
+              @endforeach
               </tbody>
             </table>
 
