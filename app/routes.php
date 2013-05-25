@@ -16,9 +16,11 @@
 	Route Controllers (S)
 */
 Route::resource('/', 'IndexController');
-Route::controller('admin', 'AdminController');
 Route::resource('login', 'LoginController');
 Route::resource('reservations', 'ReservationsController');
+
+Route::controller('res-api', 'ReservationApiController');
+Route::controller('admin', 'AdminController');
 
 /*
 	Route Controllers (E)

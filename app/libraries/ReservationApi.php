@@ -17,6 +17,25 @@
 			}
 		}
 		public static function json($input){}
+
+		public static function pullSimple($hotel_id, $skip, $take){
+			$reservations = Reservation::wherehotel_id($hotel_id)->skip($skip)->take($take)->get();
+			return $reservations;
+		}
+
+		public static function pullComplex($hotel_id = 0, $scopes = array(array('id','=','1',true))){
+			$reservations = Reservation::wherehotel_id($hotel_id);
+			foreach($scopes as $scope){
+				if(count($scope) == 4){
+					if($scope[3]){
+						$reservations->orWhere($scope[0], $scope[1], $scope[2]);
+					}else{
+						$reservations->orWhere($scope[0], $scope[1], $scope[2]);
+					}
+				}	
+			}
+			return $reservations->get();
+		}
 		public static function short_code($input){
 			//$input = $input;
 			$rules = array(
