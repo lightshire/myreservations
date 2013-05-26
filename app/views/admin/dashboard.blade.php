@@ -62,7 +62,7 @@
             @if(Session::get('success'))
               {{Alert::info('Successfully saved a new Reservation!')->open()}}
             @endif
-            <?php $reservations = ReservationApi::pullSimple(0, 0, 10)?>
+            <?php $reservations = ReservationApi::pull(array(array('hotel_id','=','0')), 0, 10)?>
             <table class='table table-condensed'>
               <thead>
                 <tr>

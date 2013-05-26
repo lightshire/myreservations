@@ -33,3 +33,8 @@ Route::when('admin/*', 'auth');
 /*
 	Route Patterns (E)
 */
+
+Route::get('/test-route',function(){
+	// ReservationApi::test();
+	return ReservationApi::className();
+});
